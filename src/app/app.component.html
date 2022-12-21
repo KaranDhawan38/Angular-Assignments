@@ -11,5 +11,10 @@
 <button (click)="toggleParagraph()">Display Details</button>
 <p *ngIf="isParagraphVisible">Hello how are you?</p>
 <ul>
-    <li *ngFor="let date of btnClickTimeStamps" [ngStyle]="{backgroundColor: date.colorItem ? 'blue' : '', color : date.colorItem ? 'white' : ''}">{{date.timestamp}}</li>
+    <li *ngFor="let date of btnClickTimeStamps; let i = index" [ngStyle]="{backgroundColor: date.colorItem ? 'blue' : '', color : date.colorItem ? 'white' : ''}">{{date.timestamp}}</li>
 </ul>
+
+<h1>Assignment 4</h1>
+<app-game-control (tickEvent)="ticking($event)"></app-game-control>
+<app-odd *ngFor="let number of oddNumbers" [number]="number"></app-odd>
+<app-even *ngFor="let number of evenNumbers" [number]="number"></app-even>

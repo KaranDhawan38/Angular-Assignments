@@ -10,6 +10,8 @@ export class AppComponent {
   username = '';
   isParagraphVisible = false;
   btnClickTimeStamps:any = [];
+  oddNumbers:number[] = [];
+  evenNumbers:number[] = [];
 
   resetUsername(){
     this.username = '';
@@ -21,5 +23,14 @@ export class AppComponent {
       "colorItem" : this.btnClickTimeStamps.length >= 4
   });
     this.isParagraphVisible = !this.isParagraphVisible;
+  }
+
+  ticking(number:number){
+    if(number%2==0){
+      this.evenNumbers.push(number);
+    }
+    else{
+      this.oddNumbers.push(number);
+    }
   }
 }
