@@ -4,12 +4,19 @@ import { Injectable, EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class CounterService {
-  counter:number = 0;
-  counterEvent = new EventEmitter<number>();
+  activeToInactiveCounter:number = 0;
+  inactiveToActiveCounter:number = 0;
+  activeToInactiveCounterEvent = new EventEmitter<number>();
+  inactiveToActiveCounterEvent = new EventEmitter<number>();
   constructor() { }
 
-  incrementCounter(){
-    this.counter++;
-    this.counterEvent.emit(this.counter);
+  activeToInactiveIncrementCounter(){
+    this.activeToInactiveCounter++;
+    this.activeToInactiveCounterEvent.emit(this.activeToInactiveCounter);
+  }
+
+  inactiveToActiveIncrementCounter(){
+    this.inactiveToActiveCounter++;
+    this.inactiveToActiveCounterEvent.emit(this.inactiveToActiveCounter);
   }
 }

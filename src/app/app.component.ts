@@ -13,10 +13,12 @@ export class AppComponent {
   btnClickTimeStamps:any = [];
   oddNumbers:number[] = [];
   evenNumbers:number[] = [];
-  counter:number = 0;
+  activeToInactiveCounter:number = 0;
+  inactiveToActiveCounter:number = 0;
 
   constructor(private counterService: CounterService){
-    counterService.counterEvent.subscribe((value:number)=>this.counter=value);
+    counterService.activeToInactiveCounterEvent.subscribe((value:number)=>this.activeToInactiveCounter=value);
+    counterService.inactiveToActiveCounterEvent.subscribe((value:number)=>this.inactiveToActiveCounter=value);
   }
 
   resetUsername(){
