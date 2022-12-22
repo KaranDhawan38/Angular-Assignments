@@ -9,7 +9,6 @@ import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
-import { UsersService } from './services/users.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,7 @@ import { UsersService } from './services/users.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [UsersService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
