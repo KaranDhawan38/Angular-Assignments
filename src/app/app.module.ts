@@ -9,6 +9,7 @@ import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { Assignment6Component } from './assignment6/assignment6.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
     OddComponent,
     EvenComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    Assignment6Component
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<h1>Assignment 6</h1>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="email">Email: </label>
+    <input type="email" name="email"
+    required
+    ngModel
+    email
+    #email="ngModel">
+    <span *ngIf="!email.valid && email.touched">Invalid Email!</span>
+  </div>
+  <div>
+    <label for="subscription">Subscription: </label>
+    <select name="subscription"
+    [ngModel]="selectedSub">
+      <option value="basic">Basic</option>
+      <option value="advanced">Advanced</option>
+      <option value="pro">Pro</option>
+    </select>
+  </div>
+  <div>
+    <label for="password">Password: </label>
+    <input type="password" name="password"
+    required
+    ngModel
+    #password="ngModel">
+    <span *ngIf="!password.valid && password.touched">Password cannot be empty!</span>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<span *ngIf="isFormInvalid">Cannot submit invalid form!</span>
