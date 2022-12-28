@@ -11,6 +11,7 @@ import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { Assignment6Component } from './assignment6/assignment6.component';
 import { Assignment7Component } from './assignment7/assignment7.component';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Assignment7Component } from './assignment7/assignment7.component';
     ActiveUsersComponent,
     InactiveUsersComponent,
     Assignment6Component,
-    Assignment7Component
+    Assignment7Component,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

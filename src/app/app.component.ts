@@ -15,6 +15,7 @@ export class AppComponent {
   evenNumbers:number[] = [];
   activeToInactiveCounter:number = 0;
   inactiveToActiveCounter:number = 0;
+  reversePipeInput = 'Hello how are you';
 
   constructor(private counterService: CounterService){
     counterService.activeToInactiveCounterEvent.subscribe((value:number)=>this.activeToInactiveCounter=value);
@@ -26,7 +27,7 @@ export class AppComponent {
   }
 
   toggleParagraph(){
-    this.btnClickTimeStamps.push({ 
+    this.btnClickTimeStamps.push({
       "timestamp" : new Date().toString(),
       "colorItem" : this.btnClickTimeStamps.length >= 4
   });
